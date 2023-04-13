@@ -1,0 +1,26 @@
+.title {
+    text-align: center;
+}
+.container {
+    margin: auto;
+    width: 200px;
+    background-color: rgb(148, 56, 56);
+    padding: 20px;
+}
+p {
+    width: 50px;
+    text-align: center;
+    background-color: white;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 2em;
+}
+button {
+    display: block;
+    margin: auto;
+    width: 80px;
+    height: 30px;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}

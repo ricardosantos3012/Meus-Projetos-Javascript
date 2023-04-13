@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./icons/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style_index.css">
+    <script src="./script/script_index.js" defer></script>
+    <title>Sistema de voto eletrônico</title>
+</head>
+<body>
+    <h1>Cadastro de candidatos</h1>
+    <div>
+        <p>Informe o nome do candidato: <input type="text" name="txtnome" id="txtnome" placeholder="Nome do candidato"></p>
+        <p>Informe o número de votação: <input type="number" name="txtnum" id="txtnum" placeholder="Número de votação"></p>
+        <input type="button" class="button" value="cadastrar" onclick="cadastrar()">
+        <p>Candidatos cadastrados</p>
+        <hr>
+        <ul id="lista">
+        </ul>
+        <hr>
+        <a href="./pages/page_vote.html"><input type="button" class="button" value="Finalizar cadastro" onclick="finalizar()"></a>
+    </div>
+</body>
+</html>

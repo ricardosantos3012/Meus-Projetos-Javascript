@@ -1,0 +1,89 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: #2b2b2b;
+    color: rgb(187, 187, 187);
+}
+
+.container{
+    background-color: #494949;
+    width: 300px;
+    height: 580px;
+    padding: 20px;
+}
+img{
+    width: 300px;
+    height: 300px;
+}
+
+.title-music{
+    width: 300px;
+    font-family: sans-serif;
+    font-size: 0.6em;
+    margin-bottom: 20px;
+}
+
+.title-music > h1{
+    margin-bottom: 5px;
+}
+
+.title-music > i{
+    font-size: 1.5em;
+}
+
+.progretion{
+    width: 300px;
+    height: 7px;
+    border: 2px solid rgb(49, 49, 49);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.point {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white;
+    margin-left: -8px;
+    cursor: pointer;
+}
+
+progress{
+    height: 7px;
+    width: 0%;
+}
+
+.time{
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+}
+
+.player-buttons{
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.fa-step-backward, .fa-step-forward{
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.fa-play-circle, .fa-pause-circle{
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.fas:hover{
+    color: #979797;
+}

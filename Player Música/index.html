@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player de Música</title>
+    <link rel="stylesheet" href="./assets/style/style.css">
+    <script src="./assets/js/script.js" defer></script>
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+</head>
+<body>
+   <div class="container">
+    <img src="./assets/images/guitar.jpg" alt="">
+    <div class="title-music">
+        <h1>----</h1>
+        <i>----</i>
+    </div>
+    <div class="duration">
+        <div class="progretion">
+            <progress value="" max="1"></progress>
+            <div class="point">
+
+            </div>
+        </div>
+        <div class="time">
+            <p class="initial">0:00</p>
+            <p class="final">0:00</p>
+        </div>
+    </div>
+    <div class="player-buttons">
+        <i class="fas fa-step-backward"></i>
+        <i class="fas fa-play-circle play"></i>
+        <i class="fas fa-pause-circle pause" style="display: none;"></i>
+        <i class="fas fa-step-forward"></i>
+    </div>
+    <audio class="music" src="./assets/musics/A tempestade e o Sol.mp3"></audio>
+   </div>
+</body>
+</html>

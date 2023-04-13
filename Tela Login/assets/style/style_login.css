@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&display=swap');
+
+
+*{
+    margin: 0;
+}
+
+body{
+    background-image: linear-gradient(to left, rgb(179, 41, 41), rgb(255, 160, 123));
+}
+.container{
+    background-color: rgba(0, 0, 0, 0.199);
+    width: 500px;
+    height: 300px;
+    margin: auto;
+    margin-top: 300px;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    font-family: 'Alkatra', cursive;
+}
+
+.container-user{
+    background-color: rgba(0, 0, 0, 0.226);
+    width: 500px;
+    height: 300px;
+    margin: auto;
+    margin-top: 250px;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    font-family: 'Alkatra', cursive;
+}
+
+.valid-user{
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.insert-user{
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.valid-password{
+    margin-bottom: 50px;
+}
+
+input{
+    width: 90%;
+    height: 30px;
+    background-color: rgb(37, 37, 37);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.3em;
+    color: white;
+    border: 0;
+    text-indent: 10px;
+}
+
+.pass-user{
+    margin-bottom: 30px;
+}
+
+.confirm-pass-user{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+a{
+    font-size: 1.3em;
+    text-decoration: none;
+    color: white;
+}
+
+button{
+    background-color: #a30000;
+    border: 0;
+    border-radius: 5px;
+    width: 150px;
+    height: 30px;
+    color: white;
+    font-family: 'Alkatra', cursive;
+    font-size: 1.2em;
+}
+
+button:hover{
+    background-color: #ee0000;
+}

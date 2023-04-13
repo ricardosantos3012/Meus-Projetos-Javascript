@@ -1,0 +1,49 @@
+body{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+li{
+    width: 250px;
+    margin-left: 40px;
+    margin-right: auto;
+    margin-top: 0.2rem;
+    color: white;
+    border-radius: 5px;
+    list-style-type: none;
+    
+}
+.button{
+    margin-left: auto;
+    margin-right: auto;
+    width: 120px;
+    height: 25px;
+    background-color: rgb(0, 24, 88);
+    border: 0;
+    border-radius: 5px;
+    color: white;
+}
+div{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(0, 81, 255);
+    width: 400px;
+    height: 300px;
+    border-radius: 5px;
+    color: white;
+}
+#txtnome{
+    margin-top: 15px;
+}
+hr{
+    width: 350px;
+}
+.excluir{
+    margin-top: 5px;
+    width: 60px;
+    height: 25px;
+    background-color: rgb(0, 24, 88);
+    border: 0;
+    border-radius: 5px;
+    color: white;
+}
