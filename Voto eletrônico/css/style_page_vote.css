@@ -2,8 +2,8 @@ body{
     text-align: center;
 }
 .button{
-    margin-left: auto;
-    margin-right: auto;
+    display: inline;
+    margin-left: 5px;
     width: 120px;
     height: 25px;
     background-color: rgb(0, 24, 88);
@@ -19,4 +19,7 @@ div{
     height: 300px;
     border-radius: 5px;
     color: white;
+}
+.insert-vote{
+    margin-top: 20px;
 }
