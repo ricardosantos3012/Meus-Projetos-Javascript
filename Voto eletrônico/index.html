@@ -11,16 +11,16 @@
 </head>
 <body>
     <h1>Cadastro de candidatos</h1>
-    <div>
-        <p>Informe o nome do candidato: <input type="text" name="txtnome" id="txtnome" placeholder="Nome do candidato"></p>
-        <p>Informe o número de votação: <input type="number" name="txtnum" id="txtnum" placeholder="Número de votação"></p>
-        <input type="button" class="button" value="cadastrar">
+    <div class="container">
+        <p>Informe o nome do candidato: <input type="text" name="txtnome" class="candidate-name input" placeholder="Nome do candidato"></p>
+        <p>Informe o número de votação: <input type="text" name="txtnum" class="candidate-number input" placeholder="Número de votação"></p>
+        <input type="button" class="register button" value="cadastrar">
         <p>Candidatos cadastrados</p>
         <hr>
-        <ul id="lista">
+        <ul class="list">
         </ul>
         <hr>
-        <a href="./pages/page_vote.html"><input type="button" class="button" value="Finalizar cadastro"></a>
+        <a href="./pages/page_vote.html"><input type="button" class="finalize-registration button" value="Finalizar cadastro"></a>
     </div>
 </body>
 </html>
