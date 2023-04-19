@@ -22,7 +22,7 @@ function register () {
         alert(`Você deve inserir apenas números`);
         clearinput();
     } else if (number1.value > number2.value){
-        alert(`O primeiro valor não pode ser maior que o segundo`);
+        alert(`O primeiro valor não pode ser maior que o segundo.`);
         clearinput();
     } else { 
         p.innerHTML = (`O intervalo de números informados é ${number1.value} até ${number2.value}`);
