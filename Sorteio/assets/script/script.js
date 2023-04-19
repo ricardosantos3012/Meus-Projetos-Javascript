@@ -21,7 +21,7 @@ function register () {
     } else if (isNaN(number1.value) || isNaN(number2.value)) {
         alert(`Você deve inserir apenas números`);
         clearinput();
-    } else if (number1.value > number2.value){
+    } else if (Number(number1.value) > Number(number2.value)){
         alert(`O primeiro valor não pode ser maior que o segundo.`);
         clearinput();
     } else { 
