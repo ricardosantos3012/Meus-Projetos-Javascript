@@ -26,8 +26,9 @@ const register =  () => {
                 clearCamp();
                 return;
             }
-            if(candidateNumber.value == NaN) {
+            if(isNaN(candidateNumber.value)) {
                 alert('Você deve inserir apenas números');
+                candidateNumber.value = '';
                 return;
             }
             candidates.push({name: candidateName.value, number: candidateNumber.value});
