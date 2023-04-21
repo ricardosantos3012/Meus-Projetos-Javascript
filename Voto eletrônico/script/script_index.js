@@ -1,8 +1,10 @@
 const registeredCandidates = [];
+const whiteVote = 0;
 const candidateName = document.querySelector('.candidate-name');
 const candidateNumber = document.querySelector('.candidate-number');
 const containerRegister = document.querySelector('.container-register');
 const containerVote = document.querySelector('.container-vote');
+const insertVote = document.querySelector('.insert-vote');
 const ul = document.createElement('ul');
 const ul2 = document.createElement('ul');
 const displayMessage = document.querySelector('.alert');
@@ -15,7 +17,8 @@ containerVote.appendChild(ul2);
 const candidates = (name, number) => {
     return {
         name: name,
-        number: number
+        number: number,
+        vote: 0
     }
 }
 
@@ -89,6 +92,18 @@ const register = () => {
         if(element.classList.contains('to-go-back')) {
             alert('Você será direcionado para a tela de cadastro e todos os dados serão perdidos.');
 
+        }
+        if(element.classList.contains('confirm')) {
+            registeredCandidates.filter((value) => {
+                if(value.number === insertVote.value) {
+                    value.vote++;
+                    insertVote.value = '';
+                }
+            })
+            console.log(registeredCandidates);
+        }
+        if(element.classList.contains('white')) {
+            whiteVote += 1;
         }
     });
 }
