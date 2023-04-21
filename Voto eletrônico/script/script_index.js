@@ -1,44 +1,89 @@
-const candidates = [];
+const registeredCandidates = [];
 const candidateName = document.querySelector('.candidate-name');
 const candidateNumber = document.querySelector('.candidate-number');
+const containerRegister = document.querySelector('.container-register');
+const containerVote = document.querySelector('.container-vote');
+const displayMessage = document.querySelector('.alert');
+const container = document.querySelector('.container');
+const votePage = document.querySelector('.vote-page');
+
+const candidates = (name, number) => {
+    return {
+        name: name,
+        number: number
+    }
+}
+
+const alertMessage = () => {
+    document.addEventListener('click', (event) => {
+        const element = event.target;
+        
+        if(element.classList.contains('candidate-name')) {
+            displayMessage.style.display = 'none';
+            return;
+        }
+        if(element.classList.contains('candidate-number')){
+            displayMessage.style.display = 'none';
+            return;
+        }
+    });
+}
+
+const message = (text) => {
+    displayMessage.innerText = `${text}`;
+    displayMessage.style.display = 'block';
+}
 
 const clearCamp = () => {
     candidateName.value = '';
     candidateNumber.value = '';
-    candidateName.focus();
 }
 
-const display = (name, number) => {
-    const list = document.querySelector('.list');
-    const listCand = document.createElement('p');
+const generateList = (name, number) => {
+    const p = document.createElement('p');
 
-    list.appendChild(listCand);
-    listCand.innerText += (`Nome: ${name} - Número: ${number}`);
+    containerRegister.appendChild(p);
+    p.innerText = (`Nome: ${name} - Número: ${number}`);
 }
 
-const register =  () => {
+const generateListTwo = (name, number) => {
+    const p = document.createElement('p');
+
+    containerVote.appendChild(p);
+    p.innerText = (`Nome: ${name} - Número: ${number}`);
+}
+
+const register = () => {
     document.addEventListener('click', (event) => {
         const element = event.target;
-    
-        if (element.classList.contains('register')) {
+
+        if(element.classList.contains('register')) {
             if(candidateName.value === '' || candidateNumber.value === '') {
-                alert('Insira todos os dados para prosseguir com o cadastro');
-                clearCamp();
+                message('Preencha os campos corretamente para efetuar o cadastro');
+                alertMessage();
                 return;
             }
             if(isNaN(candidateNumber.value)) {
-                alert('Você deve inserir apenas números');
+                message('Você deve inserir apenas números');
                 candidateNumber.value = '';
+                alertMessage();
                 return;
             }
-            candidates.push({name: candidateName.value, number: candidateNumber.value});
-            console.log(candidates);
-            alert('Candidato cadastrado com sucesso');
-            display(candidateName.value, candidateNumber.value);
+            registeredCandidates.push(candidates(candidateName.value, candidateNumber.value));
+            console.log(registeredCandidates);
+            generateList(candidateName.value, candidateNumber.value);
+            generateListTwo(candidateName.value, candidateNumber.value);
             clearCamp();
+            alertMessage();
         }
-        if(element.classList.contains('finalize-registration')) {
+        if(element.classList.contains('finalize')) {
             alert('Você será direcionado para a tela de votação');
+            container.style.display = 'none';
+            votePage.style.display = 'block';
+        }
+        if(element.classList.contains('to-go-back')) {
+            alert('Você será direcionado para a tela de cadastro e todos os dados serão perdidos.');
+            
         }
     });
 }
