@@ -22,11 +22,11 @@ label {
 }
 
 .container-register {
-    margin-left: 135px;
+    margin-left: 10px;
 }
 
 .container-vote {
-    margin-left: 50px;
+    margin-left: 10px;
 }
 
 h2 {
@@ -87,6 +87,8 @@ ul {
 }
 
 p {
+    margin: 0;
+    margin-bottom: 5px;
     margin-right: 50px;
     font-weight: bold;
     font-size: 1.2em;

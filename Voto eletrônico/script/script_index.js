@@ -3,9 +3,14 @@ const candidateName = document.querySelector('.candidate-name');
 const candidateNumber = document.querySelector('.candidate-number');
 const containerRegister = document.querySelector('.container-register');
 const containerVote = document.querySelector('.container-vote');
+const ul = document.createElement('ul');
+const ul2 = document.createElement('ul');
 const displayMessage = document.querySelector('.alert');
 const container = document.querySelector('.container');
 const votePage = document.querySelector('.vote-page');
+
+containerRegister.appendChild(ul);
+containerVote.appendChild(ul2);
 
 const candidates = (name, number) => {
     return {
@@ -42,14 +47,14 @@ const clearCamp = () => {
 const generateList = (name, number) => {
     const p = document.createElement('p');
 
-    containerRegister.appendChild(p);
+    ul.appendChild(p);
     p.innerText = (`Nome: ${name} - Número: ${number}`);
 }
 
 const generateListTwo = (name, number) => {
     const p = document.createElement('p');
 
-    containerVote.appendChild(p);
+    ul2.appendChild(p);
     p.innerText = (`Nome: ${name} - Número: ${number}`);
 }
 
@@ -83,7 +88,7 @@ const register = () => {
         }
         if(element.classList.contains('to-go-back')) {
             alert('Você será direcionado para a tela de cadastro e todos os dados serão perdidos.');
-            
+
         }
     });
 }
