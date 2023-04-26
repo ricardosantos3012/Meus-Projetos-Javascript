@@ -1,5 +1,6 @@
 const registeredCandidates = [];
-const whiteVote = 0;
+let whiteVote = 0;
+let nullVote = 0;
 const candidateName = document.querySelector('.candidate-name');
 const candidateNumber = document.querySelector('.candidate-number');
 const containerRegister = document.querySelector('.container-register');
@@ -78,13 +79,22 @@ const register = () => {
                 return;
             }
             registeredCandidates.push(candidates(candidateName.value, candidateNumber.value));
-            console.log(registeredCandidates);
             generateList(candidateName.value, candidateNumber.value);
             generateListTwo(candidateName.value, candidateNumber.value);
             clearCamp();
             alertMessage();
         }
         if(element.classList.contains('finalize')) {
+            if(registeredCandidates.length < 1) {
+                message('Não há candidatos cadastrados para efetuar a votação.');
+                alertMessage();
+                return;
+            }
+            if(registeredCandidates.length < 2) {
+                message('Você não pode realizar uma votação com apenas um candidato.');
+                alertMessage();
+                return;
+            }
             alert('Você será direcionado para a tela de votação');
             container.style.display = 'none';
             votePage.style.display = 'block';
@@ -98,12 +108,20 @@ const register = () => {
                 if(value.number === insertVote.value) {
                     value.vote++;
                     insertVote.value = '';
+                    return;
                 }
-            })
-            console.log(registeredCandidates);
+                if(value.number != insertVote.value) {
+                    nullVote ++; //O incremento está ocorrendo a cada iteração do laço, verificar.
+                    insertVote.value = '';
+                    console.log(nullVote);
+                    alert('Você anulou seu voto.');
+                    return;
+                }
+            });
         }
         if(element.classList.contains('white')) {
-            whiteVote += 1;
+            whiteVote ++;
+            alert('Você votou em branco.');
         }
     });
 }
