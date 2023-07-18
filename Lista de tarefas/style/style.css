@@ -1,0 +1,97 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    width: 400px;
+    background-color: #728491;
+    border-radius: 5px 5px 0px 0px;
+    margin: 10px 0px 0px 10px;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+
+section {
+    width: 400px;
+    background-color: #9ab2c4;
+    margin: 0px 0px 0px 10px;
+    border-radius: 0px 0px 5px 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+#gravar-tarefa {
+    display: inline-block;
+    text-align: center;
+    padding: 8px;
+    background-color: #728491;
+    width: 350px;
+    color: white;
+}
+
+#tarefas {
+    margin-top: 5px;
+    width: 200px;
+    height: 25px;
+}
+
+#gravar {
+    margin-top: 10px;
+    width: 200px;
+    height: 30px;
+    background-color: #658daa;
+    border-style: none;
+    color: white;
+}
+
+#gravar:hover {
+    background-color: #4c6d85;
+}
+
+ul {
+    margin-top: 15px;
+    list-style: none;
+}
+
+li {
+    display: flex;
+    background-color: #2b3d4b41;
+    border-radius: 10px;
+    width: 330px;
+    text-align: left;
+    margin-top: 5px;
+    margin-left: 30px;
+    padding: 5px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+}
+
+p {
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.finalizar, .delete {
+    width: 30px;
+    height: 30px;
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
+
+img {
+    margin: 0px 5px 0px 0px;
+}
