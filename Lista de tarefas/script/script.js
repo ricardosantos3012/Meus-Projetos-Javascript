@@ -42,7 +42,11 @@ class TodoList {
             }
 
             if(element.classList.contains('finalizar')) {
-                parentEl.style = 'background-color: #0ddd8d41;';
+                if(parentEl.classList.contains('verde')) {
+                    parentEl.classList.remove('verde');
+                } else {
+                    parentEl.classList.add('verde');
+                }
             }
             if(element.classList.contains('delete')) {
                 parentEl.remove();

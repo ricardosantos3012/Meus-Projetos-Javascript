@@ -92,6 +92,10 @@ p {
     border: none;
 }
 
+.verde {
+    background-color: #0ddd8d41;
+}
+
 img {
     margin: 0px 5px 0px 0px;
 }
