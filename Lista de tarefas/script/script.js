@@ -57,4 +57,4 @@ class TodoList {
 
 const newTask = new TodoList();
 
-newTask.recordTask();
+newTask.recordTask(); 
