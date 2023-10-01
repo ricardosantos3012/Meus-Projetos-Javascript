@@ -1,0 +1,52 @@
+body {
+    background-color: rgb(73, 80, 93);
+    text-align: center;
+}
+
+.title{
+    background-color: rgb(33, 40, 53);
+    width: 350px;
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+    margin-top: 5px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.div_login, .div_cad {
+    background-color: rgb(106, 117, 135);
+    width: 350px;
+    margin: auto;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+    color: white;
+}
+
+.cadastrar {
+    display: none;
+}
+#login, #password, #login_user, #password_cad, #password_repeat {
+    border-color:white;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+
+}
+.btn {
+    background-color: rgb(33, 40, 53);
+    border-radius: 5px;
+    box-shadow: none;
+    color: white;
+    width: 100px;
+    height: 30px;
+    margin: auto;
+    margin-top: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.btn_cad:hover {
+    background-color: rgb(73, 80, 93);
+}
+
